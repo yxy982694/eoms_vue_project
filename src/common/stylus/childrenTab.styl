@@ -1,0 +1,125 @@
+@import "./variable";
+.el-con2 .el-main
+  padding: 0 !important
+  height: 100%
+.el-con2 .el-tabs--card>.el-tabs__header
+  padding: 1px 0 2px 0
+  border: 1px solid $color-border
+  box-shadow: 0 0 5px 1px $color-border
+  padding-left: 3px
+  background-color: rgb(233, 240, 242)
+  box-sizing: border-box
+  // tab子页面中,header tab的样式
+.el-con2 .el-tabs--card>.el-tabs__header .el-tabs__item
+   height: 25px
+   line-height:25px
+   padding: 0 5px !important
+   border: 1px solid $color-border !important
+   font-size: $font-size-small
+   border-left: 1px solid $color-border !important
+   box-sizing: border-box
+   display: inline-block
+   &+.el-tabs__item
+     margin-left: 3px
+.el-tabs-container .el-tabs__header .el-tabs__nav
+  height: 25px
+.el-con2 .el-tabs--card>.el-tabs__header .el-tabs__item:first-child
+  display: none
+  // display: flex
+  // align-items: center
+  // justify-content: space-around
+  // border-left: 1px solid $color-border !important
+// .el-con2 .el-tabs--card>.el-tabs__header .el-tabs__item:first-child:before
+//   content: ''
+//   display: inline-block
+//   width: 16px
+//   height: 16px
+//   background: url('../image/homeIcon.png') no-repeat
+//   background-size: cover
+//   margin-top: -2px
+.el-con2 .el-tabs--card>.el-tabs__header .el-tabs__item.is-active
+  background-color: #9896a0 !important
+  color: #fff !important
+  border-bottom: none !important
+  // tab子页面中,每个小tab项的样式
+.el-con2 .el-tabs__nav
+  // display: flex
+  // align-items: center
+  width: 100%
+  white-space: nowrap
+  overflow: hidden
+  text-align: left
+  // tab子页面，中间展示内容的样式
+.el-con2 .el-tabs__content
+    width: 100%
+    overflow: hidden
+    flex: 1
+    position: relative
+    border: 1px solid $color-border
+    box-sizing: border-box
+// 资源管理中的样式
+// 因为table 是框架中的样式，写在资源管理组件中加载不到，所以写在了公共样式中
+.submain-container
+  font-size: $font-size-small
+.submain-container .el-input__suffix
+  right: 0
+.resource-container
+  position: relative
+  height: 100%
+.children-container // 包含表格的父容器，需要上下布局的要写这个
+  position: relative
+  height: 100%
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  justity-content: space-between
+.children-container .table-container
+   flex: 1
+.el-con2 .el-tab-pane
+  height: 100%
+  overflow: hidden
+.el-con2 .el-table
+  overflow: hidden
+  flex: 1
+.el-tabs__nav-next
+.el-tabs__nav-prev
+  line-height: 30px
+.tab-down-menu p:hover
+  background: #dfdfdf
+// 用户管理样式
+.el-input__icon
+  line-height: 32px
+.expand-container
+  background: #409eff
+.user-left .el-button
+  width: 45%
+  padding: 7px 0
+  text-align: center
+  border: none
+  border-radius: 0
+  background-color: transparent
+  color: #fff
+.expand-container .el-button+.el-button
+  margin-left: 6px
+  padding-left: 6px
+  border-left: 1px solid #ddd
+.user-right .btn-container
+  background-color: #fff
+  padding-left: 1px
+  // #409eff
+.user-right .btn-container .el-button
+  // border-radius: 0
+.user-right .btn-container .el-button+.el-button
+  // border-left: 1px solid #999
+.user-right .el-pagination
+  display: flex
+  justify-content: flex-end
+.user-right .el-pagination__jump
+.user-right .el-pagination__total
+  color: #fff
+.width50-left
+  float: left
+  width: 50%
+.width100-left
+  float: left
+  width: 100%

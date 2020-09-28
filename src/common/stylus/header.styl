@@ -1,0 +1,446 @@
+@import "./variable";
+@import "./mixin";
+// 顶部header部分样式
+.header-container
+   height: 70px
+   width: 100%
+   position: relative
+   box-sizing: border-box
+.headbar
+     position: fixed
+     //position: absolute
+     top: 0
+     left:0
+     right: 0
+     z-index: 1030
+     //width: 100%
+     //min-width: 1200px
+     height: 70px
+     border-color: rgba(180, 190, 190, 0.8)
+     // display: flex
+     background-size: 100% 100%
+     overflow: hidden
+// header中logo样式
+.header-left
+   float: left
+   padding-left: 20px
+   background-color: #2152bb
+   box-sizing: border-box
+   height: 100%
+   position: relative
+   @media screen and (max-width: 980px)
+     padding-left: 10px
+   h1
+    // height: 70px
+    float: left
+    margin-top: 15px
+    // display: flex
+    // align-items: center
+    margin-right: 10px
+    @media screen and (max-width: 1200px)
+      margin-top: 18px
+      .header-logo-img
+        height: 34px
+   h3
+     color: #fff
+     font-size: $font-size-large-x
+     margin-left: 10px
+     margin-top: 24px
+     float: left
+     text-align: center
+     // @media screen and (min-width: 1500px)
+     //    margin-left: 40px
+     @media screen and (max-width: 900px)
+       width: 300px
+       text-align: center
+       float: none
+       position: absolute
+       top: 50%
+       left: 50%
+       transform: translate(-50%,-50%)
+       -ms-transform: translate(-50%,-50%)
+       margin-left: 0
+       margin-top: 0
+       font-size: $font-size-large-x
+     @media screen and (min-width: 900px) and (max-width: 980px)
+       font-size: 14px
+       width: 100px
+       margin-top: 15px
+       margin-left: 0
+       line-height: 22px
+     @media screen and (min-width: 980px) and (max-width: 1110px)
+       width: 120px
+       margin-top: 16px
+       font-size: 16px
+       line-height: 22px
+     @media screen and (min-width: 1100px) and (max-width: 1180px)
+       width: 140px
+       margin-top: 16px
+       font-size: 16px
+       line-height: 22px
+     @media screen and (min-width: 1180px) and (max-width: 1230px)
+       width: 150px
+       margin-top: 16px
+       font-size: 16px
+       line-height: 22px
+     @media screen and (min-width: 1230px) and (max-width: 1250px)
+       font-size: 16px
+       line-height: 22px
+       margin-top: 25px
+     @media screen and (min-width: 1250px) and (max-width: 1350px)
+       font-size: 18px
+       line-height: 22px
+       margin-top: 24px
+     @media screen and (min-width: 1230px) and (max-width: 1500px)
+       margin-left: 30px
+     @media screen and (min-width: 1500px)
+        position: absolute
+        float: none
+        top: 50%
+        width: 100%
+        padding-left: 5%
+        transform: translate(0,-50%)
+        -ms-transform: translate(0,-50%)
+        margin-left: 0
+        margin-top: 0
+        z-index: 0
+@media screen and (max-width: 900px)
+  .header-left
+    width: 100%
+@media screen and (min-width: 900px) and (max-width: 980px)
+  .header-left
+    width: 27%
+@media screen and (min-width: 980px) and (max-width: 1230px)
+  .header-left
+    width: 30%
+@media screen and (min-width: 1230px)
+  .header-left
+    width: 38%
+// 中间3个斜线的样式
+.header-center
+  position: absolute
+  right: -30px
+  top: 0
+  height: 70px
+  width: 60px
+  z-index: 9999
+  overflow: hidden
+  // display: flex
+  background-color: transparent
+  transform: skew(-30deg,0)
+  -ms-transform: skew(-30deg,0)
+  font-size: 0
+  @media screen and (min-width: 980px) and (max-width: 1350px)
+    width: 40px
+    right: -20px
+  @media screen and (min-width: 900px) and (max-width: 980px)
+    width: 20px
+    right: -10px
+    transform: skew(-13deg,0)
+    -ms-transform: skew(-13deg,0)
+  @media screen and (max-width: 900px)
+    display: none
+.header-center-bg1
+  height: 100%
+  float: left
+  background-color: #1a3c88
+  // flex: 1
+  width: 33.33%
+.header-center-bg2
+  height: 100%
+  float: left
+  background-color: #122555
+  // flex: 1
+  width: 33.33%
+.header-center-bg3
+  height: 100%
+  float: left
+  background-color: #0e1a3c
+  // flex: 1
+  width: 33.33%
+  // 右边导航和基本信息的样式
+.header-left-icon
+  //position: absolute
+  width: 50px
+  height: 31px
+  //top: 0
+  //right: 0
+  // justify-content: center
+  // align-items: center
+  color: #fff
+  display: none
+  @media screen and (max-width: 900px)
+    display: block
+    position: absolute
+    right: 10px
+    top: 50%
+    transform: translate(0,-50%)
+    -ms-transform: translate(0,-50%)
+  .iconfont
+    font-size: 30px
+    cursor: pointer
+.header-right
+  float: right
+  position: relative
+  padding: 11px 20px 0 20px
+  background-color: #0b1026
+  box-sizing: border-box
+  height: 70px
+  z-index: 22
+  display: none
+@media screen and (min-width: 900px) and (max-width: 980px)
+  .header-right
+    width: 73%
+    display: block
+@media screen and (min-width: 980px) and (max-width: 1230px)
+  .header-right
+    width: 70%
+    display: block
+@media screen and (min-width: 1230px)
+  .header-right
+    width: 62%
+    display: block
+// 顶部各个业务的样式
+.header-business
+  // display: flex
+  //padding-left: 70px
+  width: 100%
+  box-sizing: border-box
+  font-size: $font-size-medium
+  padding-bottom: 5px
+  // justify-content: flex-end
+  padding-right: 10px
+  overflow: hidden
+  @media screen and (min-width: 1500px)
+    padding-right: 50px
+    //padding-left: 20px
+    //justify-content: flex-end
+  .header-business-item
+    background: transparent
+    float: right
+   .icon-xiaoxi
+     position: relative
+     &:after
+       content: ''
+       display: inline-block
+       width: 5px
+       height: 5px
+       border-radius: 50%
+       background-color: #ec4070
+       position: absolute
+       right: 2px
+       top: 2px
+.header-business-item:last-child
+   padding: 0 20px 0 0
+   max-width: 180px
+   cursor: auto !important
+.header-business-item+.header-business-item
+  cursor: pointer
+  border-right: 1px solid #b9b9b9
+  color: #717eb9
+  padding: 0 20px
+  // @media screen and (max-width: 1300px)
+  //   padding: 0 12px
+  // @media screen and (max-width: 1150px)
+  //   padding: 0 7px
+.header-business .header-business-item:first-child
+  padding: 0 10px 0 18px
+  color: #717eb9
+  cursor: pointer
+  // 用户名的颜色
+.user-name
+  color: #4effde !important
+  height: 18px
+  line-height: 18px
+// 导航菜单的样式
+.navbar
+   height: 30px
+   width: 100%
+   margin-top: 2px
+   // border: 1px solid red
+.root-title
+.el-menu-item
+  font-size: $font-size-medium !important
+// 修改element-ui插件导航栏样式
+.el-submenu
+  padding: 0 10px
+// 导航菜单中每一项的样式
+.el-submenu__title
+    padding: 0 10px !important
+// 导航菜单鼠标放上的样式
+.header-right-min .menuRoot:hover,
+.header-right-min .el-submenu:hover,
+.header-right-min .el-menu-item:hover,
+.header-right-min .el-submenu__title:hover
+.header-right .menuRoot:hover,
+.header-right .el-submenu:hover,
+.header-right .el-menu-item:hover,
+.header-right .el-submenu__title:hover
+    background: #1d3770 !important
+// 下拉菜单的背景色
+.el-menu--popup
+   background: #1d3770 !important
+.el-menu--popup .menuRoot:hover,
+.el-menu--popup .el-submenu:hover,
+.el-menu--popup .el-menu-item:hover,
+.el-menu--popup .el-submenu__title:hover
+     background: #2152bb !important
+// 导航菜单箭头的样式
+.el-submenu__title i
+    color: #fff !important
+    right: 4px !important
+// 导航菜单水平布局
+.el-menu-demo
+  display: flex
+  justify-content: space-between
+  align-items: center
+  overflow: hidden
+  border: none !important
+  // padding: 0 5px
+  height: 100%
+  padding-left: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  // width: 100%
+  .menuRoot
+    height: 100%
+    // border: 1px solid yellow
+    .el-submenu
+      height: 100%
+      .el-submenu__title
+        height: 100%
+        line-height: 30px
+        .root-title
+          height: 100%
+          // display: flex
+          // align-items: center
+        .el-submenu__icon-arrow
+          top: 0
+          margin-top: 10px
+.el-menu-demo>.menuRoot
+  float: left
+  flex: 1
+.el-menu-demo>.menuRoot>.el-submenu
+   padding: 0
+.el-menu-demo>.menuRoot>.el-submenu>.el-submenu__title
+   text-align: center
+   padding: 0 !important
+.el-menu-demo>.menuRoot>.el-submenu>.el-submenu__title>.root-title
+  width: auto
+  margin-right: 10px
+.el-menu-demo>.menuRoot>.el-submenu>.el-submenu__title>.el-submenu__icon-arrow
+    position: relative !important
+    margin-top: 1px !important
+// 修改element-ui导航菜单中下拉菜单的样式
+.el-menu--collapse .el-menu .el-submenu, .el-menu--popup
+    min-width: 150px !important
+// 切换菜单的样式
+.tab-container
+    height: 37px
+    box-sizing: border-box
+.tab-container .el-tabs
+   position: fixed
+   left: 0
+   top: 70px
+   width: 100%
+   z-index: 900
+.el-tabs--card>.el-tabs__header
+  border-bottom: none !important
+  margin: 0 !important
+  background-color: #fff
+// 修改element-ui切换菜单 去掉框架自带的边框，一整行的样式
+.el-tabs--card>.el-tabs__header .el-tabs__nav
+  border: none !important
+// 切换菜单的样式，修改element-ui切换菜单 激活时的样式
+// tab每一项的样式
+.el-tabs--card>.el-tabs__header .el-tabs__item
+  border-left: none !important
+// tab每一项,激活的样式
+.el-tabs--card>.el-tabs__header .el-tabs__item.is-active
+  color: #2761de !important
+  border: none !important
+  border-bottom: 2px solid #2761de !important
+  box-sizing: border-box
+  // tab项中小叉号的样式
+.el-tabs--card>.el-tabs__header .el-tabs__item .el-icon-close
+  top: -2px
+ // 只有主菜单切换tab的样式
+ .tab-container .el-tabs__nav
+   padding: 0 5px
+.tab-container .el-tabs__item
+  font-size: $font-size-medium-s !important
+.tab-container .el-tabs__item.is-active
+  height: 39px !important
+//移动端导航栏
+.header-right-min
+  border: 1px solid #e5e5e5
+  margin-top: 70px
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  box-sizing: border-box
+  z-index: 900
+  overflow: auto
+  background: #777777
+  // display: flex
+  font-size: 14px
+  box-sizing: border-box
+  border-top: 1px solid #e5e5e5
+  @media screen and (min-width: 900px)
+    display: none
+.header-business-min
+  float: left
+  width: 30%
+  height: 100%
+  overflow-y: auto
+.header-business-item-min
+  text-align: left
+  margin-left: 15px
+  margin-top: 5px
+  line-height: 20px
+  color: #fff
+.header-business-item-min+.header-business-item-min
+  cursor: pointer
+.phone-img
+  width: 100px
+  height: 100px
+  display: block
+.min-fenge
+  height: 100%
+  width: 1px
+  background: #e5e5e5
+  float: left
+.navbar-min
+  height: 100%
+  width: 69%
+  float: right
+  overflow-y: hidden
+  box-sizing: border-box
+// .header-right-min .el-menu.el-menu--horizontal>.
+  // display: flex
+  // flex-direction: column
+  // justify-content: flex-start
+  // align-items: flex-start
+.header-right-min .el-menu.el-menu--horizontal
+  overflow: auto
+.header-right-min .el-menu.el-menu--horizontal>.menuRoot
+  float: none
+  height: auto
+  width: 100px
+.header-right-min .el-menu.el-menu--horizontal>.menuRoot>.el-submenu>.el-submenu__title
+  text-align: left
+  padding-left: 10px !important
+.apk-img-show
+  position: fixed
+  top: 35px
+  right: 117px
+  width: 120px
+  height: 120px
+  z-index: 999999
+.apk-img-hide
+   display:none
+@media screen and (min-width: 1500px)
+   .apk-img-show
+      right: 147px

@@ -1,0 +1,146 @@
+// 预警管理模块
+#warnInfoTableId table
+  width: 100% !important
+#warnInfoTableId .el-table .el-button
+  width: 70px
+  box-sizing: border-box
+#warnInfoTableId .el-table .el-button+.el-button
+  margin-left: 0
+  // margin-top: 10px
+#warnInfoTableId .el-table .cell
+  // text-overflow: clip
+  // overflow: visible
+  // white-space: normal
+.warn-manage-container .dialog-loadin-container .el-dialog__body
+  padding: 10px 40px 30px 40px
+.warn-info-lokeup-container .new-build-province .el-button
+  width: 16%
+  float: left
+  margin-left: 2%
+.warn-info-lokeup-container .new-build-city .el-button
+  width: 30%
+  float: left
+  margin-left: 2%
+.warn-info-lokeup-container .new-build-province .el-form-item .el-form-item__content .el-input
+  width: 80%
+  float: left
+.warn-info-lokeup-container .new-build-city .el-form-item .el-form-item__content .el-input
+  width: 68%
+  float: left
+// 预警管理
+.warn-manage-form-content
+  overflow: hidden
+  padding: 0 20px
+  box-sizing: border-box
+  position: relative
+  .warn-manage-form-left
+    float: left
+    width: 80%
+    overflow: hidden
+    .el-form-item
+      width: 50%
+      float: left
+    .wran-biaoti
+      width: 100%
+  .warn-manage-form-right
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translate(0,-50%)
+    -ms-transform: translate(0,-50%)
+    width: 20%
+.warn-manage-form-right
+  float: none
+.warn-manage-form-right .el-button
+  display: block
+  margin: 0 auto
+.warn-manage-form-right .el-button+.el-button
+  margin-left: auto
+.warn-manage-form-right .el-button:last-child
+  margin-top: 10px
+.warn-manage-container .el-form-item
+  margin-bottom: 5px
+.warn-manage-container .dialog-warn-info-lokeup .el-form-item
+  margin-bottom: 10px
+.dialog-warn-info-download .el-input__inner
+  border: none
+.dialog-warn-info-browse .el-input
+  width: 100%
+  padding-right: 70px
+  box-sizing: border-box
+.dialog-warn-info-browse .dialog-warn-info-browse-btn
+  position: absolute
+  top: 0
+  right: 0
+.warn-info-lokeup-container .new-build-province .el-form-item .el-form-item__content
+  padding-left: 95px
+  width: 100%
+  box-sizing: border-box
+  overflow: hidden
+.warn-info-lokeup-container .new-build-city .el-form-item .el-form-item__content
+  padding-left: 95px
+  width: 100%
+  box-sizing: border-box
+  overflow: hidden
+.warn-info-lokeup-container .warn-info-lokeup-input .el-input__inner
+  border: none
+  padding: 0
+  height: 16px
+  line-height: 16px
+.warn-info-lokeup-container .warn-info-lokeup-input .el-form-item__content
+  padding-left: 60px
+  width: 100%
+  line-height: 16px
+  box-sizing: border-box
+.warn-info-lokeup-container .warn-info-lokeup-textarea .el-form-item__label
+  position: relative
+  top: 0
+  transform: translate(0,0)
+  -ms-transform: translate(0,0)
+.warn-info-lokeup-container .warn-info-lokeup-textarea .el-form-item__content
+  float: none
+.warn-info-lokeup-textarea .el-textarea
+  margin-top: 10px
+.dialog-warn-info-lokeup .el-dialog
+  max-width: 1200px
+  @media screen and (max-width: 1200px)
+    width: 700px !important
+ // 告警模板下载
+.dialog-warn-info-browse .warn-info-template-download
+  position: absolute
+  top: 0
+  right: 0
+  padding-right: 0
+  width: 60px
+  z-index: 2
+  opacity: 0
+  cursor: pointer
+  // 没有弹框form表单中label和input,float左右布局
+.form-input-left-right .float-left .el-form-item__label
+  width: 75px
+  text-align: left
+.form-input-left-right .float-left .el-form-item__content
+  padding-left: 75px
+  width: 100%
+  box-sizing: border-box
+.form-input-left-right .float-right
+  float: right
+.form-input-left-right .float-right .el-form-item__label
+  width: 75px
+  text-align: right
+.form-input-left-right .float-right .el-form-item__content
+  padding-left: 75px
+  width: 100%
+  box-sizing: border-box
+.dialog-warn-info-browse .file-uploads
+  position: absolute
+  right: 0
+  top: 0
+  font-size: 12px
+  padding: 6px 15px
+  border-radius: 3px
+  color: #fff
+  background-color: #409EFF
+// .dialog-warn-info-lokeup .el-input__inner
+//   border: none
+//   cursor: default

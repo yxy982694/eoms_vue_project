@@ -1,0 +1,343 @@
+@import "./variable";
+@import "./mixin";
+label
+  font-size: $font-size-small
+// 登录页面按钮样式
+.login-container .el-input__inner
+  height: 35px
+  line-height: 35px
+.login-container .el-button
+  padding: 10px 20px
+.el-button-group
+  margin: 2px 0
+.el-table .cell
+  line-height: 25px
+  font-size: $font-size-small
+  no-wrap()
+.el-table th
+  padding: 0
+.el-table td
+  padding: 1px 0
+// input框的初始宽度为200px,其他的宽度根据各自的情况再另行修改
+// 不是弹框中form表单中input需要单独设置为200px
+// 例如：弹框中input需要单独设置
+.el-input
+  width: 200px
+.el-input__inner
+ height: 25px
+ line-height: 25px
+ width: 100%
+ font-size: $font-size-small
+ box-sizing: border-box
+.el-input--suffix .el-input__inner
+  padding-right: 25px
+.is-in-pagination .el-input__inner
+  width: 35px
+  border-radius: 0
+.login-form .el-form-item
+  padding-right: 0
+.el-dialog
+  z-index: 8989898989898
+  max-width: 700px
+  @media screen and (max-width: 1200px)
+    width: 460px !important
+// 弹框中input的样式
+.el-form
+  overflow: hidden
+.el-form-item
+  height: auto
+  position: relative
+  margin-bottom: 10px
+  // 需要右对齐的样式
+.el-form-item .el-form-item__label
+  line-height: normal
+  position: absolute
+  left: 0
+  top: 50%
+  transform: translate(0,-50%)
+  -ms-transform: translate(0,-50%)
+  text-align: right
+  font-size: $font-size-small
+  float: none
+  padding: 0
+  // 时间控件高度为25px
+.date-picker-container .el-form-item__content
+  height: 25px
+.el-form-item__content
+  font-size: $font-size-small
+.el-form-item .el-form-item__content
+  float: left
+  line-height: 22px
+  .el-input
+    width: 100%
+    .el-input__inner
+      width: 100%
+// 登录
+.login-container .el-form-item .el-form-item__content
+  display: flex
+  width: 100% !important
+  margin-left: 0 !important
+// 首页弹框中,input的宽度,在其他地方可能会有问题
+.content-radius .el-form-item__label
+  width: 60px !important
+.content-radius .el-form-item__content
+  width: 100%
+  padding-left: 70px !important
+  box-sizing: border-box
+.el-radio__label
+  padding-left: 6px
+.el-radio
+  margin-right: 15px
+  // .children-tab-container 配置与管理里面弹框input的样式
+.children-tab-container .el-form-item .el-form-item__label
+  width: 90px !important
+.children-tab-container .el-form-item .el-form-item__content
+  padding-left: 100px !important
+  width: 100%
+  box-sizing: border-box
+  // 日期时间控件
+.el-date-editor .el-range-separator
+  font-size: $font-size-small
+  line-height: 17px
+.el-date-editor .el-range-input
+  font-size: $font-size-small
+  height: 82%
+.el-date-editor--daterange.el-input
+.el-date-editor--daterange.el-input__inner
+.el-date-editor--timerange.el-input
+.el-date-editor--timerange.el-input__inner
+  width: 100%
+ // 分页样式
+.content-radius .el-pagination
+   display: flex
+   align-items: center
+.content-radius .is-in-pagination
+   height: 25px
+.content-radius .el-pagination__jump
+   height: 25px !important
+   line-height: 25px !important
+.content-radius .el-input__inner
+   width: 28px !important
+   border-radius: 2px !important
+.el-pagination.is-background.el-pagination--small .btn-next, .el-pagination.is-background.el-pagination--small .btn-prev, .el-pagination.is-background.el-pagination--small .el-pager li
+   width: 25px
+   height: 25px
+   border-radius: 2px
+   background-color: #fff
+   color: $color-textblack
+   border: 1px solid $color-border
+.el-pagination--small .btn-next, .el-pagination--small .btn-prev, .el-pagination--small .el-pager li, .el-pagination--small .el-pager li.btn-quicknext, .el-pagination--small .el-pager li.btn-quickprev, .el-pagination--small .el-pager li:last-child
+   line-height: 25px !important
+.el-pagination.is-background .el-pager li:not(.disabled).active
+   background-color: #fff
+   color: $color-textblue
+   border: 1px solid $color-textblue
+.el-pagination__sizes .el-input__inner
+  width: 100px
+.el-pagination__total
+  height: 25px !important
+  line-height: 25px !important
+.el-pagination__sizes
+.el-pagination__sizes .el-select
+.el-pagination__sizes .el-select .el-input
+  height: 25px !important
+  line-height: 25px !important
+.el-pagination button, .el-pagination span:not([class*=suffix])
+  height: 25px !important
+  line-height: 25px !important
+  min-width: 25px !important
+  color: #303133
+  font-size: $font-size-small
+  // font-weight: 700
+.el-pagination__sizes .el-input .el-input__inner
+  font-size: $font-size-small
+.el-pager li
+  height: 25px !important
+  line-height: 25px !important
+  min-width: 25px !important
+  font-size: $font-size-small
+.el-pager+.btn-next
+  // margin-left: 5px
+  // 新增编辑弹框样式
+.el-dialog__body .el-form-item
+  // display: flex
+  // align-items: center
+.el-table .sort-caret.ascending
+  top: 0
+.el-table .sort-caret.descending
+  bottom: 3px
+.el-table .caret-wrapper
+  height: 25px
+.el-pagination .el-select .el-input .el-input__inner
+  color: #303133
+  border-radius: 0
+  border: none !important
+  // font-weight: 700
+.el-pagination__jump
+  position: relative
+.el-pagination__jump::before
+  content: '第'
+  font-size: 13px
+  display: inline-block
+  text-align: right
+  width: 28px
+  height: 25px
+  position: absolute
+  left: 0
+  top: 0
+  background-color: #DFDFDF
+.upcom-page .el-pagination__jump::before
+  content: '第'
+  font-size: 13px
+  display: inline-block
+  text-align: right
+  width: 28px
+  height: 25px
+  position: absolute
+  left: 0
+  top: 0
+  background-color: #fff
+.el-pagination__editor
+  height: 25px !important
+.el-table__row .el-button--mini
+.el-table__row .el-button--mini.is-round
+  padding: 3px 15px
+.el-tree>.el-tree-node
+    min-width:100%
+    display: inline-block
+.menu-location .el-form-item__content
+   position: relative
+.menu-location input
+   position: absolute
+   top: 50%
+   left: 100px
+   transform: translate(0,-50%)
+   -ms-transform: translate(0,-50%)
+   // 树形结构
+.el-tree-node__label
+  font-size: $font-size-small
+// 按钮组的样式
+.btn-container
+    // padding: 2px 0 0 0
+	   display: flex
+	   // border: 1px solid green
+	   border-top: none
+.btn-container .el-button
+    border-radius: 0
+	  // margin-left: 0
+.btn-container .el-button+.el-button
+    margin-left: 0px !important
+    border-left: 1px solid #fff
+   // 改变table高度时,多出gutter
+.gutter
+  display: none !important
+  width: 0 !important
+  // 右键菜单样式
+.shortcut-container
+      position: absolute
+      left: 0
+      top: 0
+      width: 65px
+      text-align: center
+      line-height: 30px
+      background: #fff
+      border: 1px solid #dfdfdf
+      padding:2px 0 4px 0
+      cursor: pointer
+      z-index: 9999999
+      .el-button
+        margin-left: 0
+        width: 65px
+        border: none
+   // 搜索框样式
+.search-container
+    padding: 5px 20px
+    text-align: left
+// 留言板
+.el-form-item .el-form-item__content .el-input .el-input__inner
+    width: 100% !important
+// 搜索框行高
+.el-input__icon
+  line-height: 25px !important
+.el-date-editor .el-input__icon
+  line-height: 17px !important
+@media screen and (min-height: 980px)
+  .dept-select .el-input__icon
+    line-height: 40px !important
+.btn-buttons
+  margin: 3px 0
+  display: flex
+  align-items: center
+  justify-content: center
+.btn-buttons .el-input
+.btn-buttons .el-select
+  margin-top: 2px
+.btn-buttons .el-button
+  margin-left: 15px
+.upcom-table .el-table .cell
+  line-height: 33px
+  @media screen and (min-height: 980px)
+   line-height: 55px
+ // 我的待办
+.todo-usertext .el-select
+  width: 60%
+.todo-usertext .el-input
+  width: 100%
+  box-sizing: border-box
+.todo-usertext .el-input__inner
+  width: 100% !important
+  padding: 0 12px
+  height: 25px
+  line-height: 25px
+  @media screen and (max-width: 1200px)
+    padding: 0 9px
+  @media screen and (min-height: 980px)
+    height: 40px
+    line-height: 40px
+.todo-usertext .dept-select
+   margin-top: 15px
+.todo-usertext .dept-select+.dept-select
+  margin-top: 10px
+@media screen and (min-height: 980px)
+  .todo-usertext .dept-select+.dept-select
+    margin-top: 32px
+.todo-usertext .el-input__suffix
+  right: 2px
+  @media screen and (max-width: 1200px)
+    right: 0
+.todo-usertext .el-input__inner::-webkit-input-placeholder
+  color: #333
+.todo-usertext .el-input__inner:-ms-input-placeholder
+  color: #333
+// 待办列表
+.upcom-page .el-pagination__editor.el-input .el-input__inner
+  height: 25px !important
+.upcom-page .el-pagination__rightwrapper
+  float: left
+.dialog-select-variable-confirm
+  display: block
+  text-align: center
+  margin: 0 auto
+.el-dialog__body
+  padding: 10px 20px 30px 20px
+.children-tab-container .el-dialog__body
+  padding: 10px 30px 30px 20px
+.dialog-city-selector .el-input
+  width: 160px
+.dialog-city-btn
+  margin-top: 10px
+  // 为兼容ie9 表格排序小箭头
+.el-table .caret-wrapper
+  display: inline-block
+  // 为兼容ie9 el-tree去掉弹性布局
+.el-tree-node__content
+  display: block
+  text-align: left
+.el-textarea__inner
+  font-size: $font-size-small
+  color: #606266
+.dialog-warnManage .el-tree
+  max-height: 300px
+  overflow: auto
+.content-radius .el-form
+  overflow: visible

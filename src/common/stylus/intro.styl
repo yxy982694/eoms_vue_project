@@ -1,0 +1,133 @@
+@import "./variable";
+// 为6个模块添加圆角和背景色
+.page-container
+  // display: flex
+  // flex-direction: column
+  // justify-content: space-between
+  height: 100%
+  overflow-y: auto
+  overflow-x: hidden
+  /* IE 浏览器 */
+  /*三角箭头的颜色*/
+  // scrollbar-arrow-color: #fff
+  /*滚动条滑块按钮的颜色*/
+  // scrollbar-face-color: #0099dd
+  /*滚动条整体颜色*/
+  // scrollbar-highlight-color: #0099dd
+  /*滚动条阴影*/
+  // scrollbar-shadow-color: #0099dd
+  /*滚动条轨道颜色*/
+  // scrollbar-track-color: #0066ff
+  /*滚动条3d亮色阴影边框的外观颜色——左边和上边的阴影色*/
+  // scrollbar-3dlight-color:#0099dd
+  /*滚动条3d暗色阴影边框的外观颜色——右边和下边的阴影色*/
+  // scrollbar-darkshadow-color: #0099dd
+  /*滚动条基准颜色*/
+  // scrollbar-base-color: #0099dd
+  /* chrome & safari 浏览器 */
+  &::-webkit-scrollbar
+    width: 6px
+    height: 6px
+    background: transparent
+  &::-webkit-scrollbar-thumb
+    background: transparent
+    border-radius: 4px
+  &:hover::-webkit-scrollbar-thumb
+    background: hsla(0, 0%, 53%, 0.4)
+  &:hover::-webkit-scrollbar-track
+    background: hsla(0, 0%, 53%, 0.1)
+  .el-row
+    padding: 0 10px
+.content-radius
+  background: #fff
+  margin-top: 10px
+  overflow: hidden
+  box-shadow: 0 0 2px 2px #dfdfdf
+  box-sizing: border-box
+// 每个模块的标题部分
+.section-title
+    // display: flex
+    // align-items: center
+    // justify-content: space-between
+    padding: 15px 18px
+    overflow: hidden
+    @media screen and (min-height: 980px)
+      padding: 15px 30px
+    .section-title-name
+      font-size: $font-size-medium
+      color: $color-textblack
+      font-weight: bold
+      float: left
+    .section-title-click // 可点击的编辑或全部按钮
+      cursor: pointer
+      font-size: $font-size-small
+      color: $color-textgray
+      float: right
+      margin-top: 1px
+// 快速通道和短信定制样式
+// 为6个模块设置内容字体大小和颜色
+.main-tabs .el-tabs__content
+    min-height: 120px
+    width: 100px
+    overflow: auto
+    position: relative
+    display: none
+.tab-down-menu
+    position: relative
+    z-index: 3333
+    background: #fff
+    border-radius: 4px
+    font-size: 12px
+    box-shadow: 2px 2px 3px 0 rgba(0,0,0,.3)
+    line-height: 15px
+    p
+      padding: 7px 16px
+      cursor: pointer
+// 滚动块的样式
+.el-carousel__button
+    background-color: $color-blue !important
+    width: 10px !important
+.el-carousel__indicator+.el-carousel__indicator
+  margin-top: 5px
+.todo-items .el-collapse
+  height: 100%
+  overflow-y: auto
+  border-top: none
+  border-bottom: none
+.todo-items .el-collapse-item
+  margin-top: 20px
+  @media screen and (min-height: 980px)
+    margin-top: 36px
+.todo-items .el-collapse-item__header
+  display: block
+  height: 32px
+  line-height: normal
+  border-bottom: none
+  position: relative
+  text-align: left
+  // overflow: hidden
+.todo-items .el-collapse-item__arrow
+  // margin-right: 20px
+  // float: right
+  position: absolute
+  right: 17px
+  top: 9px
+  margin: 0
+  @media screen and (min-height: 980px)
+    right: 30px
+  // margin-top: 9px
+.todo-items .el-collapse-item__content
+  padding-bottom: 0
+.todo-items .el-collapse-item__wrap
+  border-top: 1px solid #EBEEF5
+  margin-top: 3px
+.content-radius .el-table
+  color: $color-textblack
+.content-radius .el-carousel__indicators--vertical
+  transform: translateY(0)
+  transform: translate(0,-50%)
+  -ms-transform: translate(0,-50%)
+@media screen and (min-height: 980px)
+  .content-radius .el-carousel__indicators--vertical
+    right: 20px
+  
